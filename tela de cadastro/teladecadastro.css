@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Chettan', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+h1 {
+  color: #39c6a4;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.input-container {
+  background-color: #eafaf6;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-container .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.input-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #333;
+}
+
+.input-container input[type="date"] {
+  color: #777;
+}
+
+.checkbox-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container .checkmark {
+  width: 16px;
+  height: 16px;
+  background-color: #eafaf6;
+  border-radius: 6px;
+  border: 2px solid #39c6a4;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+
+.checkbox-container input:checked + .checkmark {
+  background-color: #39c6a4;
+  border-color: #39c6a4;
+}
+
+
+.checkbox-container .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  box-sizing: content-box;
+}
+
+
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #39c6a4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #32b395;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .input-container {
+    padding: 10px;
+  }
+
+  .input-container input {
+    font-size: 13px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+

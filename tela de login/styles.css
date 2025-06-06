@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Chettan', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+h1 {
+  color: #39c6a4;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #999;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.input-container {
+  background: #eafaf6;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* --- CHECKBOX CUSTOMIZADO --- */
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 20px;
+  white-space: nowrap; 
+  overflow: hidden;
+  position: relative;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.checkbox-label .checkmark {
+  width: 15px;
+  height: 15px;
+  background-color: #eafaf6;
+  border-radius: 6px;
+  border: 2px solid #39c6a4;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark {
+  background-color: #39c6a4;
+  border-color: #39c6a4;
+}
+
+
+
+.checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+
+.checkbox-container a {
+  color: #39c6a4;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #39c6a4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #32b395;
+}
+
+.login-text {
+  font-size: 12px;
+  color: #777;
+}
+
+.login-text a {
+  color: #39c6a4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-login {
+  margin-top: 15px;
+}
+
+.social-login p {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons img {
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .logo-img {
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  .input-container {
+    padding: 10px;
+  }
+
+  .input-container input {
+    font-size: 13px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons img {
+    width: 28px;
+  }
+}
+
