@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan&display=swap');
+
+/* --- Estilos Base (Reutilizados do seu projeto) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Chettan', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5; /* Um cinza um pouco mais claro como na imagem */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha no topo */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.selection-container {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 30px;
+}
+
+/* --- Cabeçalho com Mascote e Título --- */
+.selection-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.mascot-img {
+  width: 80px;
+  height: auto;
+}
+
+.title-bubble {
+  background-color: #eafaf6; /* Mesmo verde-claro dos inputs */
+  padding: 15px 20px;
+  border-radius: 20px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.title-bubble h2 {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Triângulo do balão de diálogo */
+.title-bubble::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #eafaf6;
+}
+
+
+/* --- Lista de Opções --- */
+.options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.option-card .icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.option-card .level-icon {
+  width: 30px;
+  height: 30px;
+}
